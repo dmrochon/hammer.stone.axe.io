@@ -1,8 +1,56 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Darker Grotesque";
+  color: crimson;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+	color: white;
+	text-decoration: none;
+}
+h1 {
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+p{
+	font-size: 25px;
+	text-align: center;
+}
+
+hr{
+	border-color: crimson;
+}
+
+#toBattleground{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#home{
+	float: right;
+}
+
+#versus{
+	margin-top: 10px;
+	font-size: 30px;
+	text-align: center;
+}
+
+#cpuArea{
+	text-align: center;
+}
+
+#player1Area{
+	text-align: center;
+}
+
+#resultArea{
+	text-align: center;
 }
