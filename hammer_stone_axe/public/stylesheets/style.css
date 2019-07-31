@@ -2,10 +2,14 @@ body {
   padding: 50px;
   font: 14px "Darker Grotesque";
   color: crimson;
+  font-size: 30px;
 }
 
+footer{
+	font-size: 20px;
+}
 a {
-  color: white;
+  color: crimson;
   text-decoration: none;
 }
 a:hover{
@@ -28,13 +32,23 @@ hr{
 	border-color: crimson;
 }
 
+.btn{
+	color: crimson;
+}
+.btn-outline-secondary:hover{
+	background-color: crimson;
+}
 #toBattleground{
 	margin-top: 20px;
 	text-align: center;
 }
-
+#p1_stone, #p1_hammer, #p1_axe{
+	display: inline;
+	margin: 20px;
+}
 #home{
 	float: right;
+	margin-top: 100px;
 }
 
 #versus{

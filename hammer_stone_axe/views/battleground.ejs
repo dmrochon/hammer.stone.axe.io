@@ -5,14 +5,34 @@
 <div class="container">
 	<div class="row">
 		<div id="player1Area" class="col-sm-4">
-			<label for="player1"><h3>Your name</h3></label>
-			<input id="player1" class="form-control" type="text" placeholder="enter your name">
+			<div class="hey"></div>
+			<label id="showN" for="p1_name"><h3>Your name</h3></label>
+
+			<div class="input-group mb-3" id="p1_name_area">
+
+			  <div class="input-group-prepend">
+			    <button class="btn btn-outline-secondary" type="button" id="sumbit-p1">Enter</button>
+			  </div>
+			  <input id="p1_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p1">
+			</div>
+			
 			<div id="p1_Score"><h4>Current Score:</h4></div>
 			<h4>Choose Your Weapon!</h4>
-			<img src="">
-			<img src="">
-			<img src="">
-			<div id="p1_choice"><h4> chooses !</h4></div>
+			
+
+			<div class="input-group mb-3" id="p1_choice_area">
+
+			  <div class="input-group-prepend">
+			    <button class="btn btn-outline-secondary" type="button" id="sumbit-p1-choice">Choose</button>
+			  </div>
+			  <input id="p1_choice" type="text" class="form-control" placeholder="The Stone, Hammer, or Axe?" aria-label="Example text with button addon" aria-describedby="submit-p1-choice">
+			</div>
+
+			<div id="p1_stone"><img src="">Stone</div>
+			<div id="p1_hammer"><img src="">Hammer</div>
+			<div id="p1_axe"><img src="">Axe</div>
+
+			<div id="p1_choice_display"><h4></h4></div>
 		</div>
 
 		<div id="resultArea" class="col-sm-4">
@@ -21,13 +41,21 @@
 			<div id="roundWinner"><h4> wins the round!</h4></div>
 			<div id="matchWinner"><h4> wins the match!</h4></div>
 			<div id="playAgain">
-				<button type="button" class="btn btn-secondary">Play another?</button>
+				<button type="button" class="btn btn-outline-secondary" onClick = "window.location.reload();">Play another?</button>
 			</div>
 		</div>
 
 		<div id="cpuArea" class="col-sm-4">
-			<label for="cpu"><h3>Challenger</h3></label>
-			<input id="cpu" class="form-control" type="text" placeholder="challeger's name">
+			<label for="cpu_name"><h3>Challenger</h3></label>
+
+			<div class="input-group mb-3" id="cpu_name_area">
+
+			  <div class="input-group-prepend">
+			    <button class="btn btn-outline-secondary" type="button" id="sumbit-cpu">Enter</button>
+			  </div>
+			  <input id="cpu_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-cpu">
+			</div>
+
 			<div id="cpu_Score"><h3>Current Score:</h3></div>
 			<h3>Choose Your Weapon!</h3>
 			<img src="">
@@ -38,12 +66,11 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-		<button id="home" type="button" class="btn btn-secondary"><a href="/">return home</a></button>
+		<button id="home" type="button" class="btn btn-outline-secondary"><a href="/">return home</a></button>
 		</div>
 	</div>
 </div>
 
 
-<script type="text/javascript" src="/javascripts/h_s_a.js"></script>
 </body>
 
