@@ -45,7 +45,17 @@ hr{
 #p1_stone, #p1_hammer, #p1_axe{
 	display: inline;
 	margin: 20px;
+	background-color: none;
+	border: none;
 }
+
+#cpu_stone, #cpu_hammer, #cpu_axe{
+	display: inline;
+	margin: 20px;
+	background-color: none;
+	border: none;
+}
+
 #home{
 	float: right;
 	margin-top: 100px;

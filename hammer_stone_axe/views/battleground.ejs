@@ -5,63 +5,56 @@
 <div class="container">
 	<div class="row">
 		<div id="player1Area" class="col-sm-4">
-			<div class="hey"></div>
 			<label id="showN" for="p1_name"><h3>Your name</h3></label>
 
 			<div class="input-group mb-3" id="p1_name_area">
 
 			  <div class="input-group-prepend">
-			    <button class="btn btn-outline-secondary" type="button" id="sumbit-p1">Enter</button>
+			    <button class="btn btn-outline-secondary" type="button" id="submit-p1">Enter</button>
 			  </div>
 			  <input id="p1_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p1">
 			</div>
 			
 			<div id="p1_Score"><h4>Current Score:</h4></div>
 			<h4>Choose Your Weapon!</h4>
-			
 
-			<div class="input-group mb-3" id="p1_choice_area">
-
-			  <div class="input-group-prepend">
-			    <button class="btn btn-outline-secondary" type="button" id="sumbit-p1-choice">Choose</button>
-			  </div>
-			  <input id="p1_choice" type="text" class="form-control" placeholder="The Stone, Hammer, or Axe?" aria-label="Example text with button addon" aria-describedby="submit-p1-choice">
-			</div>
-
-			<div id="p1_stone"><img src="">Stone</div>
-			<div id="p1_hammer"><img src="">Hammer</div>
-			<div id="p1_axe"><img src="">Axe</div>
+				<button id="p1_stone"><img src="/images/stone.png" height="40"></button>
+				<button id="p1_hammer"><img src="/images/hammer.jpg" height="40"></button>
+				<button id="p1_axe"><img src="/images/axe.png" height="40"></button>
 
 			<div id="p1_choice_display"><h4></h4></div>
 		</div>
 
 		<div id="resultArea" class="col-sm-4">
-			<img src="">
 			<h3>Results:</h3>
-			<div id="roundWinner"><h4> wins the round!</h4></div>
-			<div id="matchWinner"><h4> wins the match!</h4></div>
+			<img src="">
+			<div id="roundWinner"><h4></h4></div>
+			<div id="victor"><h4></h4></div>
+			<!-- <div id="matchWinner"><h4> wins the match!</h4></div>
 			<div id="playAgain">
 				<button type="button" class="btn btn-outline-secondary" onClick = "window.location.reload();">Play another?</button>
-			</div>
+			</div> -->
 		</div>
 
 		<div id="cpuArea" class="col-sm-4">
-			<label for="cpu_name"><h3>Challenger</h3></label>
+			<label id="showCN" for="cpu_name"><h4>Challenger</h4></label>
 
-			<div class="input-group mb-3" id="cpu_name_area">
+				<div class="input-group mb-3" id="cpu_name_area">
 
 			  <div class="input-group-prepend">
-			    <button class="btn btn-outline-secondary" type="button" id="sumbit-cpu">Enter</button>
+			    <button class="btn btn-outline-secondary" type="button" id="submit-cpu">Enter</button>
 			  </div>
-			  <input id="cpu_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-cpu">
+			  <input id="cpu_name" type="text" class="form-control" placeholder="enter their name" aria-label="Example text with button addon" aria-describedby="submit-p1">
 			</div>
 
-			<div id="cpu_Score"><h3>Current Score:</h3></div>
-			<h3>Choose Your Weapon!</h3>
-			<img src="">
-			<img src="">
-			<img src="">
-			<div id="cpu_choice"><h4> chooses !</h4></div>
+			<div id="cpu_Score"><h4>Current Score:</h4></div>
+			<h4>Choose Your Weapon!</h4>
+
+				<button id="cpu_stone"><img src="/images/stone.png" height="40"></button>
+				<button id="cpu_hammer"><img src="/images/hammer.jpg" height="40"></button>
+				<button id="cpu_axe"><img src="/images/axe.png" height="40"></button>
+
+			<div id="cpu_choice"><h4></h4></div>
 		</div>
 	</div>
 	<div class="row">
