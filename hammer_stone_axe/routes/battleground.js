@@ -6,8 +6,8 @@ router.get('/', function (req, res, next) {
 	res.render('battleground', {title: 'Battleground'});
 });
 
-// router.get('/', function(req, res, next){
-// 	res.redirect('/');
-// });
+router.get('/', function(req, res, next){
+	res.redirect('/');
+});
 
 module.exports = router;

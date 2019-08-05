@@ -1,19 +1,25 @@
 body {
   padding: 50px;
-  font: 14px "Darker Grotesque";
-  color: crimson;
+  font: 14px "Darker Grotesque", Arial;
+  /*color: crimson;*/
   font-size: 30px;
+  /*background-color: #e6fff2;*/
+  /*background-color: #e6ffff;*/
+  /*background-color: #ffd699;*/
+  color: yellow;
+  /*color: #ffd699; buton color*/
+  background-color: crimson;
 }
 
 footer{
 	font-size: 20px;
 }
 a {
-  color: crimson;
+  color: white;
   text-decoration: none;
 }
 a:hover{
-	color: white;
+	color: crimson;
 	text-decoration: none;
 }
 h1 {
@@ -28,15 +34,28 @@ p{
 	text-align: center;
 }
 
-hr{
-	border-color: crimson;
+input[type=text] {
+	background-color: #ff9900;
+	border: 1px solid yellow;
+	outline-offset: none;
+	color: white;
+}
+input[type=text]:focus{
+	color: crimson;
+	background-color: yellow;
 }
 
 .btn{
-	color: crimson;
+	color: white;
+	background-color: crimson;
 }
 .btn-outline-secondary:hover{
-	background-color: crimson;
+	color: crimson;
+	background-color: yellow;
+	border-color: yellow;
+}
+.btn-outline-secondary{
+	border-color: yellow;
 }
 #toBattleground{
 	margin-top: 20px;
@@ -65,6 +84,7 @@ hr{
 	margin-top: 10px;
 	font-size: 30px;
 	text-align: center;
+	color: #00ccff;
 }
 
 #cpuArea{
@@ -77,4 +97,10 @@ hr{
 
 #resultArea{
 	text-align: center;
+}
+
+#victor{
+	color: #00ccff;
+	font-size: 30px;
+
 }
