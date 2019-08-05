@@ -1,7 +1,10 @@
-var player1_name  
-var	player1_weapon
+var player1_score = 0;
+var cpu_score = 0;
 
-var cpu_name
+var player1_name //= document.getElementById('p1_name').value;  
+var	player1_weapon 
+
+var cpu_name  //= document.getElementById('cpu_name').value;
 var weapons //= ["hammer", "stone", "axe"];
 var cpu_weapon //= weapons[parseInt(Math.random()*weapons.length) %3];
 
@@ -9,12 +12,13 @@ $("#submit-p1").click(function(){
 	var player1_name = document.getElementById('p1_name').value;
 	$("#showN").html(player1_name);
 	$("#p1_name_area").hide();
-	
+	versus();
 	});
 $("#submit-cpu").click(function(){
 	var cpu_name = document.getElementById('cpu_name').value;
 	$("#showCN").html(cpu_name);
 	$("#cpu_name_area").hide();
+	versus();
 });
 
 function versus(){
@@ -22,137 +26,108 @@ function versus(){
 	var cpu_name = document.getElementById('cpu_name').value;
 	$("#versus").html(player1_name + "  versus  " + cpu_name);
 };
-
-// $("#sumbit-p1-choice").click(function(){
-// 	 //var player1_weapon = $('#p1_choice').val();
-// 	 var player1_name = $('#p1_name').val();
 	
-// 	if (true) {}
-// });
-
-//$("#p1_stone").addEventListener("click", gameStart);
+	playGame(player1_name, cpu_name, 5);
 
 
-var stone = document.getElementById("p1_stone");
-var hammer = document.getElementById("p1_hammer");
-var axe = document.getElementById("p1_axe");
+	var stone = document.getElementById("p1_stone");
+	var hammer = document.getElementById("p1_hammer");
+	var axe = document.getElementById("p1_axe");
 
-stone.addEventListener("click", choiceStone);
-hammer.addEventListener("click", choiceHammer);
-axe.addEventListener("click", choiceAxe);
+	stone.addEventListener("click", choiceStone);
+	hammer.addEventListener("click", choiceHammer);
+	axe.addEventListener("click", choiceAxe);
 
-function choiceStone() {
-	var player1_name = document.getElementById('p1_name').value;
-	var	cpu_name = document.getElementById('cpu_name').value;
+function choiceStone(p1, cpu) {
+		//var player1_name = document.getElementById('p1_name').value;
+		//var	cpu_name = document.getElementById('cpu_name').value;
+		var weapons = ["hammer", "stone", "axe"];
+		var cpu_weapon = weapons[parseInt(Math.random()*weapons.length) %3];
+		var player1_weapon = weapons[1];
+
+		$("#p1_choice_display").html(p1 + "  chooses  " + player1_weapon + "!");
+		$("#cpu_choice").html(cpu + "  chooses  " + cpu_weapon + "!");
+		battle();
+		
+	};
+
+function choiceHammer(p1, cpu) {
+		//var player1_name = document.getElementById('p1_name').value;
+		//var	cpu_name = document.getElementById('cpu_name').value;
+		var weapons = ["hammer", "stone", "axe"];
+		var cpu_weapon = weapons[parseInt(Math.random()*weapons.length) %3];
+		var player1_weapon = weapons[0];
+
+		$("#p1_choice_display").html(p1 + "  chooses  " + player1_weapon + "!");
+		$("#cpu_choice").html(cpu + "  chooses  " + cpu_weapon + "!");
+		battle();
+};
+
+function choiceAxe(p1, cpu) {
+		//var player1_name = document.getElementById('p1_name').value;
+		//var	cpu_name = document.getElementById('cpu_name').value;
+		var weapons = ["hammer", "stone", "axe"];
+		var cpu_weapon = weapons[parseInt(Math.random()*weapons.length) %3];
+		var player1_weapon = weapons[2];
+
+		$("#p1_choice_display").html(p1 + "  chooses  " + player1_weapon + "!");
+		$("#cpu_choice").html(cpu + "  chooses  " + cpu_weapon + "!");
+		battle();
+		
+};
+
+function battle(p1, cpu){
 	var weapons = ["hammer", "stone", "axe"];
-	var cpu_weapon = weapons[parseInt(Math.random()*weapons.length) %3];
-	var player1_weapon = weapons[1];
-
-	$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!");
-	$("#cpu_choice").html(cpu_name + "  chooses  " + cpu_weapon + "!");
-
+	if (cpu_weapon == weapons[0] && player1_weapon == weapons[1]){
+		$("#roundWinner").html(cpu + "  wins the round!");
+		return cpu;
+	}
+	if (cpu_weapon == weapons[0] && player1_weapon == weapons[2]){
+		$("#roundWinner").html(p1 + "  wins the round!");
+		return p1;
+	}
+	if (cpu_weapon == weapons[1] && player1_weapon == weapons[0]){
+		$("#roundWinner").html(p1 + "  wins the round!");
+		return p1;
+	}
+	if (cpu_weapon == weapons[1] && player1_weapon == weapons[2]){
+		$("#roundWinner").html(cpu + "  wins the round!");
+		return cpu;
+	}
+	if (cpu_weapon == weapons[2] && player1_weapon == weapons[0]){
+		$("#roundWinner").html(cpu + "  wins the round!");
+		return cpu;
+	}
+	if (cpu_weapon == weapons[2] && player1_weapon == weapons[1]){
+		$("#roundWinner").html(p1 + "  wins the round!");
+		return p1;
+	}
 	if (cpu_weapon == player1_weapon){
 		$("#roundWinner").html("It's a draw!");
 		return null;
-		}
-	if (cpu_weapon == weapons[0]) {
-		$("#roundWinner").html(cpu_name + "  wins the round!");
-		return cpu;
-		}
-	if(cpu_weapon == weapons[2]){
-		$("#roundWinner").html(player1_name + "  wins the round!");
-		return p1;
-	}
-
-};
-
-function choiceHammer() {
-	var player1_name = document.getElementById('p1_name').value;
-	var	cpu_name = document.getElementById('cpu_name').value;
-	var weapons = ["hammer", "stone", "axe"];
-	var cpu_weapon = weapons[parseInt(Math.random()*weapons.length) %3];
-	var player1_weapon = weapons[0];
-	$("#victor").html((player1_name + "  wins the match!!!").toUpperCase());
-	$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!");
-	$("#cpu_choice").html(cpu_name + "  chooses  " + cpu_weapon + "!");
-
-	if (cpu_weapon == player1_weapon){
-		$("#roundWinner").html("It's a draw!");
-		return null;
-		}
-	if (cpu_weapon == weapons[2]) {
-		$("#roundWinner").html(cpu_name + "  wins the round!");
-		return cpu;
-		}
-	if(cpu_weapon == weapons[1]){
-		$("#roundWinner").html(player1_name + "  wins the round!");
-		return p1;
-	}
-
-};
-
-function choiceAxe() {
-	var player1_name = document.getElementById('p1_name').value;
-	var	cpu_name = document.getElementById('cpu_name').value;
-	var weapons = ["hammer", "stone", "axe"];
-	var cpu_weapon = weapons[parseInt(Math.random()*weapons.length) %3];
-	var player1_weapon = weapons[2];
-
-	$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!");
-	$("#cpu_choice").html(cpu_name + "  chooses  " + cpu_weapon + "!");
-
-	if (cpu_weapon == player1_weapon){
-		$("#roundWinner").html("It's a draw!");
-		return null;
-		}
-	if (cpu_weapon == weapons[1]) {
-		$("#roundWinner").html(cpu_name + "  wins the round!");
-		return cpu;
-		}
-	if(cpu_weapon == weapons[0]){
-		$("#roundWinner").html(player1_name + "  wins the round!");
-		return p1;
 	}
 };
 
-// function playGame(p1, p2, playUntil) {
-// 	var player1_score = 0;
-// 	var cpu_score = 0;
+function playGame(p1, cpu, endgame) {
+	 var player1_name = document.getElementById('p1_name').value;
+	 var cpu_name = document.getElementById('cpu_name').value;
+	
+	while(player1_score < endgame && cpu_score < endgame){
+		var winner = battle(p1, cpu);
+		if(winner != null){
+			if (p1 === winner){
+				player1_score ++;
+				$("#p1_Score").html(player1_score);
+			}else if(cpu === winner){
+				cpu_score ++;
+				$("#cpu_Score").html(cpu_score);
+			}
+		}
+	}
+	if (player1_score > cpu_score) {
+		$("#victor").html((player1_name + "  is the victor!!!").toUpperCase());
+	} else if(cpu_score > player1_score){
+		$("#victor").html((cpu_name + "  is the victor!!!").toUpperCase());
+	}
+};
 
-// 	while(player1_score < playUntil && cpu_score < playUntil){
-// 		var winner = playRound(p1, p2);
-
-// 		if(winner != null){
-// 			if (p1.name === winner.name){
-// 				player1_score ++;
-// 			}else if(p2.name === winner.name){
-// 				player2_score ++;
-// 			}
-// 		}
-// 	}
-// 	if (player1_score > player2_score) {
-// 		console.log(p1.name + " is the victor!!!");
-// 	} else if(player2_score > player1_score){
-// 		console.log(p2.name + " is the victor!!!");
-// 	}
-// }
-// var endgame = 5;
-
-// if (player_1_score == endgame || cpu_score == endgame){
-// 	$("#victor").html((winner + "wins the match!!!").toUpperCase())
-//  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  Event listener on click, set value to stone, rock or paper. 

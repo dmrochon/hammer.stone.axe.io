@@ -1,7 +1,7 @@
 <% layout('/layout') %>
 
 <h1>The Battleground</h1>
-<div id="versus"> vs. </div>
+<div id="versus"></div>
 <div class="container">
 	<div class="row">
 		<div id="player1Area" class="col-sm-4">
@@ -15,12 +15,12 @@
 			  <input id="p1_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p1">
 			</div>
 			
-			<div id="p1_Score"><h4>Current Score:</h4></div>
+			<h4>Current Score:<div id="p1_Score">2</div></h4>
 			<h4>Choose Your Weapon!</h4>
 
-				<button id="p1_stone"><img src="/images/stone.png" height="40"></button>
+				<button id="p1_stone"><img src="/images/stone.jpg" height="40"></button>
 				<button id="p1_hammer"><img src="/images/hammer.jpg" height="40"></button>
-				<button id="p1_axe"><img src="/images/axe.png" height="40"></button>
+				<button id="p1_axe"><img src="/images/axe.jpg" height="40"></button>
 
 			<div id="p1_choice_display"><h4></h4></div>
 		</div>
@@ -46,13 +46,13 @@
 			  </div>
 			  <input id="cpu_name" type="text" class="form-control" placeholder="enter their name" aria-label="Example text with button addon" aria-describedby="submit-p1">
 			</div>
-
-			<div id="cpu_Score"><h4>Current Score:</h4></div>
+			<h4>Current Score:<div id="cpu_Score">1</div></h4>
+			
 			<h4>Choose Your Weapon!</h4>
 
-				<button id="cpu_stone"><img src="/images/stone.png" height="40"></button>
+				<button id="cpu_stone"><img src="/images/stone.jpg" height="40"></button>
 				<button id="cpu_hammer"><img src="/images/hammer.jpg" height="40"></button>
-				<button id="cpu_axe"><img src="/images/axe.png" height="40"></button>
+				<button id="cpu_axe"><img src="/images/axe.jpg" height="40"></button>
 
 			<div id="cpu_choice"><h4></h4></div>
 		</div>
