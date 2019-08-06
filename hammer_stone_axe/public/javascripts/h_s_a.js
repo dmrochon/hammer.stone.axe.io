@@ -85,30 +85,35 @@ function battle(p1, p2){
 	var endgame = 5;
 
 	if (cpu_weapon == weapons[0] && player1_weapon == weapons[1]){
+		document.getElementById("showGif").setAttribute("src", "/images/hammer.jpg");
 		$("#roundWinner").html(cpu_name + "  wins the round!");
 		
 		cpu_score ++;
 		$("#cpu_Score").html(cpu_score);	
 	}
 	else if (cpu_weapon == weapons[0] && player1_weapon == weapons[2]){
+		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		player1_score ++;
 				$("#p1_Score").html(player1_score);
 	}
 	else if (cpu_weapon == weapons[1] && player1_weapon == weapons[0]){
+		document.getElementById("showGif").setAttribute("src", "/images/hammer.jpg");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		player1_score ++;
 		$("#p1_Score").html(player1_score);	
 	}
 	else if (cpu_weapon == weapons[1] && player1_weapon == weapons[2]){
+		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
 		$("#roundWinner").html(cpu_name + "  wins the round!");
 		
 		cpu_score ++;
 		$("#cpu_Score").html(cpu_score);
 	}
 	else if (cpu_weapon == weapons[2] && player1_weapon == weapons[0]){
+		document.getElementById("showGif").setAttribute("src", "/images/stone.jpg");
 		$("#roundWinner").html(cpu_name + "  wins the round!");
 		
 		cpu_score ++;
@@ -127,10 +132,10 @@ function battle(p1, p2){
 	if (player1_score == endgame || cpu_score == endgame){
 
 		if (player1_score > cpu_score) {
-		$("#victor").html((player1_name + "  is the victor!!!").toUpperCase());
+		$("#victor").html(((player1_name + "  is the victor!!!").toUpperCase()).bold());
 			} 
 		else if(cpu_score > player1_score){
-			$("#victor").html((cpu_name + "  is the victor!!!").toUpperCase());
+			$("#victor").html(((cpu_name + "  is the victor!!!").toUpperCase()).bold());
 			}
 		$("#playAgain").show();
 		 canClick = false;

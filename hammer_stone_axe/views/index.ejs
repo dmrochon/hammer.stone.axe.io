@@ -1,11 +1,41 @@
 <% layout('/layout') %>
 
-    <h1>Welcome to <%= title %>!</h1>
-    <img src="">
-    <p>Hammer crushes Stone, Stone shatters Axe, Axe slices Hammer.   Five rounds determine the victor!</p>
-    <h2>Choose Wisely...</h2>
-    <div id="toBattleground">
-    	<button type="button" class="btn btn-outline-secondary"><a href="/battleground">Begin Game</a></button>
+    <h1><b>Welcome to <%= title %>!</b></h1>
+    <div class="container">
+    	<div class="row">
+    		<div id="triangle" class="col-sm-12">
+		    	<img src="/images/triangle.jpg" height="300">
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">   
+		    	<p>Hammer crushes Stone, Stone shatters Axe, Axe slices Hammer.<br>Five rounds determine the victor!</p>
+		    </div>
+		</div>
+		<div class="row">
+			<div id="chooseWise" class="col-sm-12">
+		    	<h2>Choose Wisely...</h2>
+		    </div>
+   		</div>    
+    	<div class="row">
+    		
+    			<div class="col-sm-6">
+    				<div id="chalCpu">
+					    <h3>Challenge the Intelligent Computer?</h3>
+					    <div id="toBattleground">
+					    	<button type="button" class="btn btn-outline-secondary"><a href="/battleground">Begin Game</a></button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div id="chalP2">
+						<h3>Challenge a Worthy Human Nearby?</h3>
+						<div id="toOtherBattle">
+							<button type="button" class="btn btn-outline-secondary"><a href="/p2_battleground">Begin Game</a></button>
+						</div>
+					</div>
+				</div>
+		</div>		
 	</div>
   </body>
 </html>

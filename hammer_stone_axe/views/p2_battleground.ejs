@@ -1,69 +1,76 @@
 <% layout('/layout') %>
 
-<h1>Rival Battleground</h1>
+<h1><b>Rival Battleground</b></h1>
 <div id="versus"></div>
 <div class="container">
 	<div class="row">
 		<div id="player1Area" class="col-sm-4">
-			<label id="showN" for="p1_name"><h3>Your name</h3></label>
+			<label id="showN" for="p1_name"><h3>Player One</h3></label>
 
 			<div class="input-group mb-3" id="p1_name_area">
-
 			  <div class="input-group-prepend">
 			    <button class="btn btn-outline-secondary" type="button" id="submit-p1">Enter</button>
 			  </div>
-			  <input id="p1_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p1">
+			  
+			  	<input id="p1_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p1" method="post"required>
 			</div>
 			
 			<h4>Current Score:<div id="p1_Score"></div></h4>
 			<h4>Choose Your Weapon!</h4>
 
-				<button id="p1_stone"><img src="/images/stone.jpg" height="40"></button>
-				<button id="p1_hammer"><img src="/images/hammer.jpg" height="40"></button>
-				<button id="p1_axe"><img src="/images/axe.jpg" height="40"></button>
-
-			<div id="p1_choice_display"><h4></h4></div>
+				<button id="p1_stone"><img src="/images/stone.jpg" height="65"></button>
+				<button id="p1_hammer"><img src="/images/hammer.jpg" height="65"></button>
+				<button id="p1_axe"><img src="/images/axe.jpg" height="65"></button>
 		</div>
 
 		<div id="resultArea" class="col-sm-4">
-			<h3>Results:</h3>
-			<img src="">
-			<div id="roundWinner"><h4></h4></div>
-			<div id="victor"><h4></h4></div>
-			
-			<div id="playAgain" >
-				<button type="button" class="btn btn-outline-secondary" onClick = "window.location.reload();">Play another?</button>
-			</div>
+			<div id="showGif"><h3>Results:</h3></div>
+			<!-- <img src="/images/battle_gif.png" height="245"> -->
 		</div>
 
-		<div id="cpuArea" class="col-sm-4">
-			<label id="showCN" for="cpu_name"><h4>Challenger</h4></label>
+		<div id="player2Area" class="col-sm-4">
+			<label id="showP2" for="p2_name"><h4>Player Two</h4></label>
 
-				<div class="input-group mb-3" id="cpu_name_area">
+				<div class="input-group mb-3" id="p2_name_area">
 
 			  <div class="input-group-prepend">
-			    <button class="btn btn-outline-secondary" type="button" id="submit-cpu">Enter</button>
+			    <button class="btn btn-outline-secondary" type="button" id="submit-p2">Enter</button>
 			  </div>
-			  <input id="cpu_name" type="text" class="form-control" placeholder="enter their name" aria-label="Example text with button addon" aria-describedby="submit-p1">
+			  <input id="p2_name" type="text" class="form-control" placeholder="enter their name" aria-label="Example text with button addon" aria-describedby="submit-p2">
 			</div>
-			<h4>Current Score:<div id="cpu_Score"></div></h4>
+			<h4>Current Score:<div id="p2_Score"></div></h4>
 			
 			<h4>Choose Your Weapon!</h4>
 
-				<button id="cpu_stone"><img src="/images/stone.jpg" height="40"></button>
-				<button id="cpu_hammer"><img src="/images/hammer.jpg" height="40"></button>
-				<button id="cpu_axe"><img src="/images/axe.jpg" height="40"></button>
+				<button id="p2_stone"><img src="/images/stone.jpg" height="65"></button>
+				<button id="p2_hammer"><img src="/images/hammer.jpg" height="65"></button>
+				<button id="p2_axe"><img src="/images/axe.jpg" height="65"></button>
 
-			<div id="cpu_choice"><h4></h4></div>
 		</div>
 	</div>
 	<div class="row">
+		<div class="col-sm-4">
+			<div id="p1_choice_display"><h4></h4></div>
+		</div>
+		<div id="roundStuffs" class="col-sm-4">
+			<div id="roundWinner"><h4></h4></div>
+			<div id="victor"><h4></h4></div>
+			
+			<div id="playAgain">
+				<button type="button" class="btn btn-outline-secondary" onClick = "window.location.reload();">Play another?</button>
+				<button type="button" class="btn btn-outline-secondary"><a href="/p2_battleground">Battle Human?</a></button>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div id="p2_choice_display"><h4></h4></div>
+		</div>
+	</div>
+	<div id="home" class="row">
 		<div class="col-sm-12">
-		<button id="home" type="button" class="btn btn-outline-secondary"><a href="/">return home</a></button>
+		<button  type="button" class="btn btn-outline-secondary"><a href="/">return home</a></button>
 		</div>
 	</div>
 </div>
-
 
 </body>
 
