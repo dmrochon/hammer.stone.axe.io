@@ -3,12 +3,12 @@ body {
   font: 14px "Darker Grotesque", Arial;
   /*color: crimson;*/
   font-size: 30px;
-  /*background-color: #e6fff2;*/
-  /*background-color: #e6ffff;*/
-  /*background-color: #ffd699;*/
+ /* background-color: #ff9900;*/
+  background-color: #0099ff;
+ /* background-color: #ffd699;*/
   color: yellow;
   /*color: #ffd699; buton color*/
-  background-color: crimson;
+  /*background-color: crimson;*/
 }
 
 footer{
@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 a:hover{
-	color: crimson;
+	color: #0099ff;
 	text-decoration: none;
 }
 h1 {
@@ -41,16 +41,17 @@ input[type=text] {
 	color: white;
 }
 input[type=text]:focus{
-	color: crimson;
+	color: #0099ff;
 	background-color: yellow;
 }
 
 .btn{
 	color: white;
-	background-color: crimson;
+	background-color: none;
 }
 .btn-outline-secondary:hover{
-	color: crimson;
+	color: #0099ff;
+	/*color: #ff9900;*/
 	background-color: yellow;
 	border-color: yellow;
 }
@@ -84,7 +85,7 @@ input[type=text]:focus{
 	margin-top: 10px;
 	font-size: 30px;
 	text-align: center;
-	color: #00ccff;
+	color: white;
 }
 
 #cpuArea{
@@ -100,7 +101,7 @@ input[type=text]:focus{
 }
 
 #victor{
-	color: #00ccff;
+	color: white;
 	font-size: 30px;
 
 }

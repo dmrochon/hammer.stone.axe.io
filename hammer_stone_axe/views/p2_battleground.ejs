@@ -1,6 +1,6 @@
 <% layout('/layout') %>
 
-<h1>The Battleground</h1>
+<h1>Rival Battleground</h1>
 <div id="versus"></div>
 <div class="container">
 	<div class="row">
@@ -8,19 +8,19 @@
 			<label id="showN" for="p1_name"><h3>Your name</h3></label>
 
 			<div class="input-group mb-3" id="p1_name_area">
+
 			  <div class="input-group-prepend">
 			    <button class="btn btn-outline-secondary" type="button" id="submit-p1">Enter</button>
 			  </div>
-			  
-			  	<input id="p1_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p1" method="post"required>
+			  <input id="p1_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p1">
 			</div>
 			
 			<h4>Current Score:<div id="p1_Score"></div></h4>
 			<h4>Choose Your Weapon!</h4>
 
-				<button id="p1_stone"><img src="/images/stone.jpg" height="50"></button>
-				<button id="p1_hammer"><img src="/images/hammer.jpg" height="50"></button>
-				<button id="p1_axe"><img src="/images/axe.jpg" height="50"></button>
+				<button id="p1_stone"><img src="/images/stone.jpg" height="40"></button>
+				<button id="p1_hammer"><img src="/images/hammer.jpg" height="40"></button>
+				<button id="p1_axe"><img src="/images/axe.jpg" height="40"></button>
 
 			<div id="p1_choice_display"><h4></h4></div>
 		</div>
@@ -50,23 +50,11 @@
 			
 			<h4>Choose Your Weapon!</h4>
 
-				<button id="cpu_stone"><img src="/images/stone.jpg" height="50"></button>
-				<button id="cpu_hammer"><img src="/images/hammer.jpg" height="50"></button>
-				<button id="cpu_axe"><img src="/images/axe.jpg" height="50"></button>
+				<button id="cpu_stone"><img src="/images/stone.jpg" height="40"></button>
+				<button id="cpu_hammer"><img src="/images/hammer.jpg" height="40"></button>
+				<button id="cpu_axe"><img src="/images/axe.jpg" height="40"></button>
 
 			<div id="cpu_choice"><h4></h4></div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<button id="p1_stone"><img src="/images/stone.jpg" height="60"></button>
-			<button id="p1_hammer"><img src="/images/hammer.jpg" height="60"></button>
-			<button id="p1_axe"><img src="/images/axe.jpg" height="60"></button>
-		</div>
-		<div class="col-sm-6">
-			<button id="cpu_stone"><img src="/images/stone.jpg" height="60"></button>
-			<button id="cpu_hammer"><img src="/images/hammer.jpg" height="60"></button>
-			<button id="cpu_axe"><img src="/images/axe.jpg" height="60"></button>
 		</div>
 	</div>
 	<div class="row">
