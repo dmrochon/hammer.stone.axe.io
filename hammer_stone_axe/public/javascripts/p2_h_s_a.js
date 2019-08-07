@@ -80,7 +80,7 @@ function versus(){
 
 		}
 
-		if(typeof player1_weapon != "undefined" && player2_weapon != "undefined"){
+		if(typeof player1_weapon != "undefined" && typeof player2_weapon != "undefined"){
 			endgame = 5;
 			if (player1_score < endgame && player2_score < endgame) {
 				counter = setTimeout(restart, 3000);
@@ -249,8 +249,6 @@ function battle(){
 		$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!").show();
 		$("#p2_choice_display").html(player2_name + "  chooses  " + player2_weapon + "!").show();
 		
-			
-		
 	}
 
 	if (player1_score == endgame || player2_score == endgame){
@@ -267,6 +265,7 @@ function battle(){
 		$("#playAgain2").show();
 		 canClick = false;
 		 clearTimeout(counter);
+		 $("countdown").html(("CONGRATULATIONS!!!").bold());
 	}
 	
 };
