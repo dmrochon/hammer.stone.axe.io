@@ -10,6 +10,8 @@ var cpu_weapon
 var canClick = true;
 
 $("#playAgain").hide();
+$("#crown").hide();
+$("#crown2").hide();
 
 $("#submit-p1").click(function(){
 	var player1_name = document.getElementById('p1_name').value;
@@ -127,17 +129,20 @@ function battle(){
 		$("#p1_Score").html(player1_score);
 	}
 	else {
+		document.getElementById("showGif").setAttribute("src", "data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
 		$("#roundWinner").html("It's a draw!");
 	}
 
 	if (player1_score == endgame || cpu_score == endgame){
 
 		if (player1_score > cpu_score) {
-		$("#victor").html(((player1_name + "  is the victor!!!").toUpperCase()).bold());
-			} 
+			$("#victor").html(((player1_name + "  is the victor!!!").toUpperCase()).bold());
+			$("#crown1").show();
+		} 
 		else if(cpu_score > player1_score){
 			$("#victor").html(((cpu_name + "  is the victor!!!").toUpperCase()).bold());
-			}
+			$("#crown2").show();
+		}
 		$("#playAgain").show();
 		 canClick = false;
 	}

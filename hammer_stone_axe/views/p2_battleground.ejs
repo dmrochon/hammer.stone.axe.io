@@ -5,6 +5,7 @@
 <div class="container">
 	<div class="row">
 		<div id="player1Area" class="col-sm-4">
+			<img id="crown" src="/images/crown.jpg" height="30">
 			<label id="showN" for="p1_name"><h3>Player One</h3></label>
 
 			<div class="input-group mb-3" id="p1_name_area">
@@ -18,18 +19,23 @@
 			<h4>Current Score:<div id="p1_Score"></div></h4>
 			<h4>Choose Your Weapon!</h4>
 
-				<button id="p1_stone"><img src="/images/stone.jpg" height="65"></button>
 				<button id="p1_hammer"><img src="/images/hammer.jpg" height="65"></button>
+				<button id="p1_stone"><img src="/images/stone.jpg" height="65"></button>
 				<button id="p1_axe"><img src="/images/axe.jpg" height="65"></button>
+				<div id="instruct1">
+					<h5>Press A</h5><h5>Press S</h5><h5>Press D</h5>
+				</div>	
 		</div>
 
 		<div id="resultArea" class="col-sm-4">
-			<div ><h3>Results:</h3>
+			<div><h3 id="countdown">Begin the game!</h3>
+				<div id="draw"></div>
 				<img id="showGif" src="" height="245">
 			</div>
 		</div>
 
 		<div id="player2Area" class="col-sm-4">
+			<img id="crown2" src="/images/crown.jpg" height="30">
 			<label id="showP2" for="p2_name"><h3>Player Two</h3></label>
 
 				<div class="input-group mb-3" id="p2_name_area">
@@ -37,16 +43,18 @@
 			  <div class="input-group-prepend">
 			    <button class="btn btn-outline-secondary" type="button" id="submit-p2">Enter</button>
 			  </div>
-			  <input id="p2_name" type="text" class="form-control" placeholder="enter their name" aria-label="Example text with button addon" aria-describedby="submit-p2">
+			  <input id="p2_name" type="text" class="form-control" placeholder="enter your name" aria-label="Example text with button addon" aria-describedby="submit-p2">
 			</div>
 			<h4>Current Score:<div id="p2_Score"></div></h4>
 			
 			<h4>Choose Your Weapon!</h4>
 
+				<button id="p2_hammer"><img src="/images/hammer.jpg" height="65"></button>			
 				<button id="p2_stone"><img src="/images/stone.jpg" height="65"></button>
-				<button id="p2_hammer"><img src="/images/hammer.jpg" height="65"></button>
 				<button id="p2_axe"><img src="/images/axe.jpg" height="65"></button>
-
+				<div id="instruct2">
+					<h5>Press J</h5><h5>Press K</h5><h5>Press L</h5>
+				</div>
 		</div>
 	</div>
 	<div class="row">
