@@ -122,10 +122,12 @@ input[type=text]:focus{
 	color: white;
 	font-size: 35px;
 }
- #showP2{
- 	color: white;
+
+#showP2{
 	font-size: 35px;
- }
+ 	color: white;
+	
+}
 
 #home{
 	text-align: center;

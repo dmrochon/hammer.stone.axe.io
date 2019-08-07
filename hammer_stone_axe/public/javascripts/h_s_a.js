@@ -79,7 +79,7 @@ function choiceAxe() {
 	}	
 };
 
-function battle(p1, p2){
+function battle(){
 	console.log(cpu_weapon, player1_weapon);
 	var weapons = ["hammer", "stone", "axe"];
 	var endgame = 5;
@@ -106,20 +106,21 @@ function battle(p1, p2){
 		$("#p1_Score").html(player1_score);	
 	}
 	else if (cpu_weapon == weapons[1] && player1_weapon == weapons[2]){
-		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
-		$("#roundWinner").html(cpu_name + "  wins the round!");
-		
-		cpu_score ++;
-		$("#cpu_Score").html(cpu_score);
-	}
-	else if (cpu_weapon == weapons[2] && player1_weapon == weapons[0]){
 		document.getElementById("showGif").setAttribute("src", "/images/stone.jpg");
 		$("#roundWinner").html(cpu_name + "  wins the round!");
 		
 		cpu_score ++;
 		$("#cpu_Score").html(cpu_score);
 	}
+	else if (cpu_weapon == weapons[2] && player1_weapon == weapons[0]){
+		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
+		$("#roundWinner").html(cpu_name + "  wins the round!");
+		
+		cpu_score ++;
+		$("#cpu_Score").html(cpu_score);
+	}
 	else if (cpu_weapon == weapons[2] && player1_weapon == weapons[1]){
+		document.getElementById("showGif").setAttribute("src", "/images/stone.jpg");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		player1_score ++;
