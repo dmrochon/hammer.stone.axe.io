@@ -10,7 +10,7 @@ var cpu_weapon
 var canClick = true;
 
 $("#playAgain").hide();
-$("#crown").hide();
+$("#crown1").hide();
 $("#crown2").hide();
 
 $("#submit-p1").click(function(){
@@ -87,42 +87,42 @@ function battle(){
 	var endgame = 5;
 
 	if (cpu_weapon == weapons[0] && player1_weapon == weapons[1]){
-		document.getElementById("showGif").setAttribute("src", "/images/hammer.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/hammer_smash.png");
 		$("#roundWinner").html(cpu_name + "  wins the round!");
 		
 		cpu_score ++;
 		$("#cpu_Score").html(cpu_score);	
 	}
 	else if (cpu_weapon == weapons[0] && player1_weapon == weapons[2]){
-		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_slice.png");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		player1_score ++;
 				$("#p1_Score").html(player1_score);
 	}
 	else if (cpu_weapon == weapons[1] && player1_weapon == weapons[0]){
-		document.getElementById("showGif").setAttribute("src", "/images/hammer.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/hammer_smash.png");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		player1_score ++;
 		$("#p1_Score").html(player1_score);	
 	}
 	else if (cpu_weapon == weapons[1] && player1_weapon == weapons[2]){
-		document.getElementById("showGif").setAttribute("src", "/images/stone.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_broke.png");
 		$("#roundWinner").html(cpu_name + "  wins the round!");
 		
 		cpu_score ++;
 		$("#cpu_Score").html(cpu_score);
 	}
 	else if (cpu_weapon == weapons[2] && player1_weapon == weapons[0]){
-		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_slice.png");
 		$("#roundWinner").html(cpu_name + "  wins the round!");
 		
 		cpu_score ++;
 		$("#cpu_Score").html(cpu_score);
 	}
 	else if (cpu_weapon == weapons[2] && player1_weapon == weapons[1]){
-		document.getElementById("showGif").setAttribute("src", "/images/stone.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_broke.png");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		player1_score ++;

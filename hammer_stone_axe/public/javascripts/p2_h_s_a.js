@@ -13,7 +13,7 @@ var counter
 var endgame
 
 $("#playAgain2").hide();
-$("#crown").hide();
+$("#crown1").hide();
 $("#crown2").hide();
 
 $("#submit-p1").click(function(){
@@ -41,10 +41,6 @@ function versus(){
 	var stone = document.getElementById("p1_stone");
 	var hammer = document.getElementById("p1_hammer");
 	var axe = document.getElementById("p1_axe");
-
-	// stone.addEventListener("click", choiceStone);
-	// hammer.addEventListener("click", choiceHammer);
-	// axe.addEventListener("click", choiceAxe);
 
 	//player 2 button selection
 	var stone2 = document.getElementById("p2_stone");
@@ -97,18 +93,11 @@ function restart(){
 	$("#p1_choice_display").html('');
 	$("#p2_choice_display").html('');
 	$("#roundWinner").html('');
-}
+};
 
-	//RIGHT ARROW KEY event.which 39 event.key ArrowRight event.code ArrowRight
-	//LEFT ARRROW KEY event.which 37 event.key ArrowLeft event.code ArrowLeft
-	//a KEY event.key a event.which 65 event.code KeyA
-	//s KEY event.key s event.which 83 event.code KeyS
-	//d KEY event.key d event.which 68 event.code KeyD
-	//need keydown to trigger keypress
-//})
-	// stone2.addEventListener("click", choiceStone2);
-	// hammer2.addEventListener("click", choiceHammer2);
-	// axe2.addEventListener("click", choiceAxe2);
+function congrats(){
+	 $("#countdown").html(("CONGRATULATIONS!!!").bold());
+	};
 
 function choiceStone() {
 	if(canClick){
@@ -184,7 +173,7 @@ function battle(){
 	endgame = 5;
 
 	if (player2_weapon == weapons[0] && player1_weapon == weapons[1]){
-		document.getElementById("showGif").setAttribute("src", "/images/hammer.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/hammer_smash.png");
 		$("#roundWinner").html(player2_name + "  wins the round!");
 
 		$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!").show();
@@ -194,7 +183,7 @@ function battle(){
 		$("#p2_Score").html(player2_score);	
 	}
 	else if (player2_weapon == weapons[0] && player1_weapon == weapons[2]){
-		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_slice.png");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!").show();
@@ -204,7 +193,7 @@ function battle(){
 				$("#p1_Score").html(player1_score);
 	}
 	else if (player2_weapon == weapons[1] && player1_weapon == weapons[0]){
-		document.getElementById("showGif").setAttribute("src", "/images/hammer.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/hammer_smash.png");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!").show();
@@ -214,7 +203,7 @@ function battle(){
 		$("#p1_Score").html(player1_score);	
 	}
 	else if (player2_weapon == weapons[1] && player1_weapon == weapons[2]){
-		document.getElementById("showGif").setAttribute("src", "/images/stone.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_broke.png");
 		$("#roundWinner").html(player2_name + "  wins the round!");
 		
 		$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!").show();
@@ -224,7 +213,7 @@ function battle(){
 		$("#p2_Score").html(player2_score);
 	}
 	else if (player2_weapon == weapons[2] && player1_weapon == weapons[0]){
-		document.getElementById("showGif").setAttribute("src", "/images/axe.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_slice.png");
 		$("#roundWinner").html(player2_name + "  wins the round!");
 		
 		$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!").show();
@@ -234,7 +223,7 @@ function battle(){
 		$("#p2_Score").html(player2_score);
 	}
 	else if (player2_weapon == weapons[2] && player1_weapon == weapons[1]){
-		document.getElementById("showGif").setAttribute("src", "/images/stone.jpg");
+		document.getElementById("showGif").setAttribute("src", "/images/axe_broke.png");
 		$("#roundWinner").html(player1_name + "  wins the round!");
 		
 		$("#p1_choice_display").html(player1_name + "  chooses  " + player1_weapon + "!").show();
@@ -261,11 +250,12 @@ function battle(){
 			$("#victor").html(((player2_name + "  is the victor!!!").toUpperCase()).bold());
 			$("#crown2").show();
 		}
-
+		
 		$("#playAgain2").show();
 		 canClick = false;
 		 clearTimeout(counter);
-		 $("countdown").html(("CONGRATULATIONS!!!").bold());
+		 congrats();
+		 // $("#countdown").html(("CONGRATULATIONS!!!").bold());
 	}
 	
 };

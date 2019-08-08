@@ -77,6 +77,10 @@ input[type=text]:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
 input[type=text]:focus::placeholder {
   color: #0099ff;
 }
+
+button{
+	background-image: none;
+}
 .btn{
 	color: white;
 	background-color: none;
