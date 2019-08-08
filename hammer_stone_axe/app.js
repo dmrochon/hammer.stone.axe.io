@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var battlegroundRouter = require('./routes/battleground');
 var p2_battlegroundRouter = require('./routes/p2_battleground');
+var championsRouter = require('./routes/champions');
 
 
 var app = express();
@@ -29,6 +30,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/battleground', battlegroundRouter);
 app.use('/p2_battleground', p2_battlegroundRouter);
+app.use('/champions', championsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

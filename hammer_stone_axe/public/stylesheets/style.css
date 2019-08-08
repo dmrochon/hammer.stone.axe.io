@@ -81,6 +81,13 @@ input[type=text]:focus::placeholder {
 button{
 	background-image: none;
 }
+
+.table{
+	color: yellow;
+}
+.table th{
+	color: white;
+}
 .btn{
 	color: white;
 	background-color: none;
